@@ -1,0 +1,34 @@
+body {
+    background-color: #000000;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+  }
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+  }
+
+#games img {
+    height: 200px;
+}
+
+#games .flex-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+#header {
+  background-image: url("ConcreteBackground.jpeg");
+  
+}
+
+#members img {
+    height: 400px;
+}
+
+#members .flex-container {
+    display: flex;
+    justify-content: space-around;
+}
