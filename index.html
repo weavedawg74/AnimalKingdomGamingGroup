@@ -1,42 +1,187 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="css/index.css">
-    </head>
-    <body>
-        <div id="header">
-            <img src="images/AK Red.png">
-                <p>We are the Animal Kingdom Gaming Group, a few buddies who enjoy gaming together and bringing others into the fold.</p>
-                <p>We play entirely on PC and are all very eager to brag about our battlestations and view what others have as well.</p>
-        
-        
-        <h2>We're the founders of the Animal Kingdom</h2>
-            <div id="members" class="flex-container">
-                <p><img src="images/ABrutalAnimal_raw.png"></p>
-                <p><img src="images/Weavedawg_raw.png"></p>
-                 
-                        
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Animal Kingdom Gaming Group</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="{% url 'home' %}">AKG Group</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu"
+                    aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainMenu">
+
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="userMenu" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userMenu">
+                                <a class="dropdown-item" href="{% url 'my_account' %}">My account</a>
+                                <a class="dropdown-item" href="{% url 'password_change' %}">Change password</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="{% url 'logout' %}">Log out</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <form class="form-inline ml-auto">
+                        <a href="{% url 'login' %}" class="btn btn-outline-secondary">Log in</a>
+                        <a href="{% url 'signup' %}" class="btn btn-primary ml-2">Register</a>
+                    </form>
+
+                </div>
             </div>
-    </div>
+        </nav>
+        <div id="header">
+            <img src="https://i.imgur.com/TTTrnYT.png">
+            <p>We are the Animal Kingdom Gaming Group, a few buddies who enjoy gaming together and bringing others into
+                the fold.</p>
+            <p>We play entirely on PC and are all very eager to brag about our battlestations and view what others have
+                as well.</p>
+
+
+            <h2>We're the founders of the Animal Kingdom</h2>
+            <div id="members" class="flex-container">
+                <p><img src="https://i.imgur.com/jmHNTvD.png"></p>
+                <p><img src="https://i.imgur.com/6OUEJuv.png"></p>
+
+
+            </div>
+        </div>
 
         <div id="join">
             <h3>If you ever want to game with us:</h3>
-                <p>Register or Log In</p>
-                <p>Select a game from the list</p>
-                <p>Select an available time</p>
-                <p>And we'll see you online</p>
+            <p><a href=#>Register</a> or <a href=#>Log In</a></p>
+            <p>Select a game from the list</p>
+            <p>Select an available time</p>
+            <p>And we'll see you online</p>
         </div>
-        
-            <h4>Games we play</h4>
-            <div id="games" class="flex-container">
-                <p>Apex Legends<img src="images/Apex_legends_cover.jpg"></p>
-                <p>Rainbow Six: Siege<img src="images/Tom_Clancy_s_Rainbow_Six_Siege_cover.jpg"></p>
-                <p>Rocket League<img src="images/rocket_league_cover.jpg"></p>
-                <p>For Honor<img src="images/220px-For_Honor_cover_art.jpg"></p>
-                <p>Elite Dangerous<img src="images/elite-dangerous-cover.jpg"></p>
-                <p>Fall Guys<img src="images/220px-Fall_Guys_cover.jpg"></p>
-                <p>Mortal Kombat<img src="images/220px-Mortal_Kombat_11_cover_art.png"></p>
-                <p>Battlewake<img src="images/battlewake-boxart-01-ps4-us-05june2019.jpeg"></p>
+
+        <h4>Games we play</h4>
+        <div id="games" class="row row-cols-2 row-cols-md-4">
+            <div class="col mb-4">
+                <div class="card" style="width: 15rem;">
+                    <div class="card-body">
+                        <p class="card-text">Apex Legends</p>
+                    </div>
+                    <img src="https://i.imgur.com/LmDHHPj.jpg" class="card-img-bottom" alt="Apex Legends cover art">
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card" style="width: 15rem;">
+                    <div class="card-body">
+                        <p class="card-text">Rainbow Six: Siege</p>
+                    </div>
+                    <img src="https://i.imgur.com/ThIr4PN.jpg" class="card-img-bottom" alt="Apex Legends cover art">
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card" style="width: 15rem;">
+                    <div class="card-body">
+                        <p class="card-text">Rocket League</p>
+                    </div>
+                    <img src="https://i.imgur.com/mGPQPSP.jpg" class="card-img-bottom" alt="Apex Legends cover art">
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card" style="width: 15rem;">
+                    <div class="card-body">
+                        <p class="card-text">For Honor</p>
+                    </div>
+                    <img src="https://i.imgur.com/Z5TgqLD.jpg" class="card-img-bottom" alt="Apex Legends cover art">
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card" style="width: 15rem;">
+                    <div class="card-body">
+                        <p class="card-text">Elite Dangerous</p>
+                    </div>
+                    <img src="https://i.imgur.com/jCuK15H.jpg" class="card-img-bottom" alt="Apex Legends cover art">
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card" style="width: 15rem;">
+                    <div class="card-body">
+                        <p class="card-text">Fall Guys</p>
+                    </div>
+                    <img src="https://i.imgur.com/DelLdPa.jpg" class="card-img-bottom" alt="Apex Legends cover art">
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card" style="width: 15rem;">
+                    <div class="card-body">
+                        <p class="card-text">Mortal Kombat 11</p>
+                    </div>
+                    <img src="https://i.imgur.com/VAOXqVc.png" class="card-img-bottom" alt="Apex Legends cover art">
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card" style="width: 15rem;">
+                    <div class="card-body">
+                        <p class="card-text">Battlewake</p>
+                    </div>
+                    <img src="https://i.imgur.com/GwLmMQC.jpg" class="card-img-bottom" alt="Apex Legends cover art">
+                </div>
+            </div>
+
+
         </div>
-    </body>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+            <a class="navbar-brand" href="#"><img src="https://i.imgur.com/VdArSaM.png" alt="WEAVE Logo" width="35rem"
+                    height="50rem" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse flex-grow-1 text-right" id="collapsibleNavbar">
+                <ul class="nav navbar-nav ml-auto w-100 justify-content-center flex-row">
+                    <li class="nav-item">
+                        <a href="mailto:weaverling.a@gmail.com"><img src="https://i.imgur.com/C9t63FA.png"
+                                title="Contact" alt="Contact" width="50rem"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://www.facebook.com/weavedawg74" target="_blank"><img
+                                src="https://i.imgur.com/zy2V17P.png" title="Facebook" alt="Facebook" width="50rem"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://www.linkedin.com/in/andrew-weaverling/" target="_blank"><img
+                                src="https://i.imgur.com/Hn8Ix3A.png" title="LinkedIn" alt="LinkedIn" width="50rem"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://github.com/weavedawg74" target="_blank"><img
+                                src="https://i.imgur.com/86gBT2g.png" title="Github" alt="Github" width="50rem"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://www.instagram.com/weavedawg74/" target="_blank"><img
+                                src="https://i.imgur.com/RgBDJCr.png" title="Instagram" alt="Instagram"
+                                width="50rem"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://www.youtube.com/channel/UCQJSMsybsmQmvPmgTOR5osw" target="_blank"><img
+                                src="https://i.imgur.com/aYOy66y.png" title="YouTube" alt="YouTube" width="50rem"></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
 
 </html>

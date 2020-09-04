@@ -1,3 +1,8 @@
+@font-face {
+   font-family: DeadlyClaws;
+   src: url(DEADLYCLAWS.ttf)
+}
+
 body {
     background-color: #000000;
     text-align: center;
@@ -11,7 +16,7 @@ body {
   }
 
 #games img {
-    height: 200px;
+    height: 18rem;
 }
 
 #games .flex-container {
@@ -31,4 +36,12 @@ body {
 #members .flex-container {
     display: flex;
     justify-content: space-around;
+}
+
+.card-body {
+    background-color: #000000;
+}
+
+.navbar-brand {
+    font-family: DeadlyClaws;
 }
