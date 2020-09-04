@@ -1,47 +1,55 @@
 @font-face {
-   font-family: DeadlyClaws;
-   src: url(DEADLYCLAWS.ttf)
+	font-family: DeadlyClaws;
+	src: url(DEADLYCLAWS.ttf);
 }
 
 body {
-    background-color: #181818;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #ffffff;
-  }
+	background-color: #181818;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #ffffff;
+}
 
 .flex-container {
-    display: flex;
-    justify-content: space-around;
-  }
+	display: flex;
+	justify-content: space-around;
+}
 
 #games img {
-    height: 18rem;
+	height: 18rem;
 }
 
 #games .flex-container {
-    display: flex;
-    justify-content: space-around;
+	display: flex;
+	justify-content: space-around;
 }
 
 #header {
-  background-image: url("https://i.imgur.com/ZmqX3rQ.jpg");
-  
+	background-image: url("https://i.imgur.com/ZmqX3rQ.jpg");
 }
 
 #members img {
-    height: 400px;
+	height: 400px;
 }
 
 #members .flex-container {
-    display: flex;
-    justify-content: space-around;
+	display: flex;
+	justify-content: space-around;
+}
+
+#members2 .flex-container {
+	display: flex;
+	justify-content: space-around;
+}
+
+#members2 img {
+	height: 250px;
 }
 
 .card-body {
-    background-color: #000000;
+	color: #000000;
 }
 
 .navbar-brand {
-    font-family: DeadlyClaws;
+	font-family: DeadlyClaws;
 }
