@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -7,66 +8,142 @@
     <link rel="stylesheet" href="css/index.css">
     <title>Animal Kingdom Gaming Group</title>
 </head>
-<body>
+
+<body id="top">
     <div class="container-fluid">
-        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
             <div class="container">
-                <a class="navbar-brand" href="{% url 'home' %}">AKG Group</a>
+                <a class="navbar-brand" href="#top">AKG Group</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu"
                     aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
                 <div class="collapse navbar-collapse" id="mainMenu">
-
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="userMenu" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userMenu">
-                                <a class="dropdown-item" href="{% url 'my_account' %}">My account</a>
-                                <a class="dropdown-item" href="{% url 'password_change' %}">Change password</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="{% url 'logout' %}">Log out</a>
+                    <div class="form-inline ml-auto">
+                        <div class="row">
+                            <div>
+                                <div class="input-group pb-modalreglog-input-group ml-auto">
+                                    <button class="btn btn-primary pb-modalreglog-submit" data-toggle="modal"
+                                        data-target="#myModal">Login</button>
+                                    <button class="btn btn-secondary pb-modalreglog-submit ml-2" data-toggle="modal"
+                                        data-target="#myModal2">Join Us</button>
+                                </div>
                             </div>
-                        </li>
-                    </ul>
-
-                    <form class="form-inline ml-auto">
-                        <a href="{% url 'login' %}" class="btn btn-outline-secondary">Log in</a>
-                        <a href="{% url 'signup' %}" class="btn btn-primary ml-2">Join Us</a>
-                    </form>
-
+                        </div>
+                    </div>
+                </div>
+        </nav>
+        <!--Log In Modal-->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-dark" id="exampleModalLongTitle">Log In</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group text-dark">
+                                <label for="email">Email address</label>
+                                <div class="input-group pb-modalreglog-input-group mb-4">
+                                    <input type="email" class="form-control" id="email" placeholder="Email" required>
+                                    <span class="input-group-addon"><span
+                                            class="glyphicon glyphicon-user"></span></span>
+                                </div>
+                            </div>
+                            <div class="form-group text-dark">
+                                <label for="password">Password</label>
+                                <div class="input-group pb-modalreglog-input-group mb-4">
+                                    <input type="password" class="form-control" id="pws" placeholder="Password"
+                                        required>
+                                    <span class="input-group-addon"><span
+                                            class="glyphicon glyphicon-lock"></span></span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Log in</button>
+                    </div>
                 </div>
             </div>
-        </nav>
-        <div id="header">
-            <img src="https://i.imgur.com/TTTrnYT.png">
-            <p>We are the Animal Kingdom Gaming Group, a few buddies who enjoy gaming together and bringing others into
-                the fold.</p>
-            <div id="members" class="flex-container">
-                <p><img src="https://i.imgur.com/6OUEJuv.png"></p>
-                <p><img src="https://i.imgur.com/jmHNTvD.png"></p>
-
+        </div>
+        <!--Register Modal-->
+        <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-dark" id="exampleModalLongTitle">Join the
+                            AKG
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="pb-modalreglog-form-reg">
+                            <div class="form-group">
+                                <div id="pb-modalreglog-progressbar"></div>
+                            </div>
+                            <div class="form-group text-dark">
+                                <label for="email">Email address</label>
+                                <div class="input-group pb-modalreglog-input-group mb-4">
+                                    <span class="input-group-addon"><span
+                                            class="glyphicon glyphicon-user"></span></span>
+                                    <input type="email" class="form-control" id="inputEmail" placeholder="Email"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="form-group text-dark">
+                                <label for="password">Password</label>
+                                <div class="input-group pb-modalreglog-input-group mb-4">
+                                    <span class="input-group-addon"><span
+                                            class="glyphicon glyphicon-lock"></span></span>
+                                    <input type="password" class="form-control" id="inputPws" placeholder="Password"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="form-group text-dark">
+                                <label for="confirmpassword">Confirm password</label>
+                                <div class="input-group pb-modalreglog-input-group mb-4">
+                                    <span class="input-group-addon"><span
+                                            class="glyphicon glyphicon-lock"></span></span>
+                                    <input type="password" class="form-control" id="inputConfirmPws"
+                                        placeholder="Confirm Password" required>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Sign up</button>
+                    </div>
+                </div>
             </div>
+        </div>
+        <div id="header">
+            <img src="https://i.imgur.com/TTTrnYT.png" class="img-fluid">
+            <h4>We are the Animal Kingdom Gaming Group, a few buddies who enjoy gaming together and bringing others into
+                the fold.</h4>
         </div>
         <div id="members2" class="flex-container">
             <div class="card mb-3" style="max-width: 540px;">
                 <div class="row no-gutters">
                     <div class="col-md-4">
-                        <img src="https://i.imgur.com/UtX7grn.png" class="card-img" alt="pic of weavedawg">
+                        <img src="https://i.imgur.com/6OUEJuv.png" class="card-img bg-dark" alt="pic of weavedawg">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
                             <h5 class="card-title">Weavedawg</h5>
-                            <p class="card-text">Weave is 31 years old, he's a US Army veteran, but don't worry, that
-                                didn't
-                                make him any better at shooters in any way aside from knowing that it is not real life
-                                at
-                                all.
-                                If you die there is no respawn. He's got the better PC between him and Brutal.</p>
+                            <p class="card-text">the Animal Kingdom's resident Tactician. Whether on the fields of
+                                Rocket League or hunkered down in the fields of FPS games, he's always thinking of the
+                                step beyond the next step. His play-style of cooler heads prevail is the saving grace to
+                                errors made by other members.</p>
 
                         </div>
                     </div>
@@ -79,31 +156,85 @@
                     <div class="col-md-8">
                         <div class="card-body">
                             <h5 class="card-title">ABrutalAnimal</h5>
-                            <p class="card-text">A huge piece of shit, he thinks he has a dope ass mullet but it pales
-                                in
-                                comparison to the guys from Eskimo Callboys. He's pretty bad at gaming and is often
-                                carried
-                                by weavedawg through most matches, but weave is best friend's with his brother so he
-                                deals
-                                with him. Quite whiney too.</p>
+                            <p class="card-text">the Animal Kingdom's resident Technician. Whether on the fields of
+                                Rocket League or the fields of FPS games, he always brings the crispy flicks. His
+                                play-style of shoot first and ask questions later is the driving force behind many of
+                                the Animal Kingdoms victories.</p>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <img src="https://i.imgur.com/ai4D3dI.png" class="card-img" alt="pic of ABrutalAnimal">
+                    <div class="col-md-4 bg-dark">
+                        <img src="https://i.imgur.com/jmHNTvD.png" class="card-img" alt="pic of ABrutalAnimal">
                     </div>
                 </div>
             </div>
         </div>
         <div id="join">
             <p class="h1">If you ever want to game with us:</p>
-            <p><a href=#>Register</a> or <a href=#>Log In</a></p>
-            <p>Go to the <a href=#>sign up</a> page</p>
-            <p>Select a game from the list</p>
-            <p>Select a date</p>
+            <p>Click the button below</p>
+            <p>Fill out the form</p>
             <p>And we'll see you online</p>
         </div>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#gameQueueModal"
+            data-whatever="@getbootstrap">Play with the Animal Kingdom</button>
 
-        <p class="h1">Games we play</p>
+        <div class="modal fade" id="gameQueueModal" tabindex="-1" role="dialog" aria-labelledby="gameQueueModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-dark" id="exampleModalLabel">Play with the AKG</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group text-dark">
+                                <label for="validationCustomUsername">Platform Username</label>
+                                <input type="text" class="form-control" id="validationCustomUsername"
+                                    placeholder="platformusername" required>
+                            </div>
+                            <div class="form-group text-dark">
+                                <label for="exampleFormControlSelect1">Select your Platform</label>
+                                <select class="form-control" id="exampleFormControlSelect1" required>
+                                    <option value="">Select a Platform</option>
+                                    <option value="Steam">Steam</option>
+                                    <option value="Epic Games">Epic Games</option>
+                                    <option value="GoG">GoG</option>
+                                    <option value="Origin">Origin</option>
+                                    <option value="Uplay">Uplay</option>
+                                </select>
+                            </div>
+                            <div class="form-group text-dark">
+                                <label for="exampleFormControlSelect2">Select the Game(s) you Play</label>
+                                <small id="gamesHelp" class="form-text text-muted">Hold ctrl to select more than
+                                    one</small>
+                                <select multiple class="form-control" id="exampleFormControlSelect2" required>
+                                    <option value="Apex Legends">Among Us</option>
+                                    <option value="Apex Legends">Apex Legends</option>
+                                    <option value="Battlefield 4">Battlefield 4</option>
+                                    <option value="Battlewake">Battlewake</option>
+                                    <option value="Black Desert Online">Black Desert Online</option>
+                                    <option value="Bloons Tower Defense 6">Bloons Tower Defense 6</option>
+                                    <option value="Elite Dangerous">Elite Dangerous</option>
+                                    <option value="Fall Guys">Fall Guys</option>
+                                    <option value="For Honor">For Honor</option>
+                                    <option value="Mortal Kombat 11">Mortal Kombat 11</option>
+                                    <option value="Rainbow Six: Siege">Rainbow Six: Siege</option>
+                                    <option value="Rocket League">Rocket League</option>
+                                </select>
+                            </div>
+
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h1>Games we play</h1>
+
         <div id="games" class="row row-cols-2 row-cols-md-4">
             <div class="col mb-4">
                 <div class="card" style="width: 15rem;">
@@ -118,7 +249,7 @@
                     <div class="card-body">
                         <p class="card-text">Rainbow Six: Siege</p>
                     </div>
-                    <img src="https://i.imgur.com/ThIr4PN.jpg" class="card-img-bottom" alt="Apex Legends cover art">
+                    <img src="https://i.imgur.com/ThIr4PN.jpg" class="card-img-bottom" alt="R6 Siege cover art">
                 </div>
             </div>
             <div class="col mb-4">
@@ -126,7 +257,16 @@
                     <div class="card-body">
                         <p class="card-text">Rocket League</p>
                     </div>
-                    <img src="https://i.imgur.com/mGPQPSP.jpg" class="card-img-bottom" alt="Apex Legends cover art">
+                    <img src="https://i.imgur.com/mGPQPSP.jpg" class="card-img-bottom" alt="Rocket League cover art">
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card" style="width: 15rem;">
+                    <div class="card-body">
+                        <p class="card-text">Black Desert Online</p>
+                    </div>
+                    <img src="https://i.imgur.com/T69ylnY.jpg" class="card-img-bottom"
+                        alt="Black Desert Online cover art">
                 </div>
             </div>
             <div class="col mb-4">
@@ -134,7 +274,15 @@
                     <div class="card-body">
                         <p class="card-text">For Honor</p>
                     </div>
-                    <img src="https://i.imgur.com/Z5TgqLD.jpg" class="card-img-bottom" alt="Apex Legends cover art">
+                    <img src="https://i.imgur.com/Z5TgqLD.jpg" class="card-img-bottom" alt="For Honor cover art">
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card" style="width: 15rem;">
+                    <div class="card-body">
+                        <p class="card-text">Bloon Tower Defense 6</p>
+                    </div>
+                    <img src="https://i.imgur.com/Oyx4HBA.jpg" class="card-img-bottom" alt="Bloons TD6 cover art">
                 </div>
             </div>
             <div class="col mb-4">
@@ -142,7 +290,7 @@
                     <div class="card-body">
                         <p class="card-text">Elite Dangerous</p>
                     </div>
-                    <img src="https://i.imgur.com/jCuK15H.jpg" class="card-img-bottom" alt="Apex Legends cover art">
+                    <img src="https://i.imgur.com/jCuK15H.jpg" class="card-img-bottom" alt="Elite Dangerous cover art">
                 </div>
             </div>
             <div class="col mb-4">
@@ -150,7 +298,15 @@
                     <div class="card-body">
                         <p class="card-text">Fall Guys</p>
                     </div>
-                    <img src="https://i.imgur.com/DelLdPa.jpg" class="card-img-bottom" alt="Apex Legends cover art">
+                    <img src="https://i.imgur.com/DelLdPa.jpg" class="card-img-bottom" alt="Fall Guys cover art">
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card" style="width: 15rem;">
+                    <div class="card-body">
+                        <p class="card-text">Battlefield 4</p>
+                    </div>
+                    <img src="https://i.imgur.com/vZwJyEW.jpg" class="card-img-bottom" alt="Battlefield 4 cover art">
                 </div>
             </div>
             <div class="col mb-4">
@@ -158,7 +314,7 @@
                     <div class="card-body">
                         <p class="card-text">Mortal Kombat 11</p>
                     </div>
-                    <img src="https://i.imgur.com/VAOXqVc.png" class="card-img-bottom" alt="Apex Legends cover art">
+                    <img src="https://i.imgur.com/VAOXqVc.png" class="card-img-bottom" alt="MK 11 cover art">
                 </div>
             </div>
             <div class="col mb-4">
@@ -166,7 +322,15 @@
                     <div class="card-body">
                         <p class="card-text">Battlewake</p>
                     </div>
-                    <img src="https://i.imgur.com/GwLmMQC.jpg" class="card-img-bottom" alt="Apex Legends cover art">
+                    <img src="https://i.imgur.com/GwLmMQC.jpg" class="card-img-bottom" alt="Battlewake cover art">
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card" style="width: 15rem;">
+                    <div class="card-body">
+                        <p class="card-text">Among Us</p>
+                    </div>
+                    <img src="https://i.imgur.com/nvo2vov.jpg" class="card-img-bottom" alt="Among Us cover art">
                 </div>
             </div>
 
