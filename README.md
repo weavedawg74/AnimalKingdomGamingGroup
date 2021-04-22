@@ -1,4 +1,4 @@
-# AKGG_Website
+# Animal Kingdom Gaming Group website
 
 Website that I have been working on in my spare time as a site for my friends and I to link up with new players to game together. 
 
