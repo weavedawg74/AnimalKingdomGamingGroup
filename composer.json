@@ -1,0 +1,25 @@
+{
+    "name": "AKG/AKG-php",
+    "type": "library",
+    "license": "",
+    "homepage": "https://github.com/weavedawg74/AnimalKingdomGamingGroup",
+    "description": "",
+    "keywords": "",
+    "authors": [
+        {
+            "name": "weavedawg",
+            "email": ""
+        }
+    ],
+    "require": {
+        "php": ">=7.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~8.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "Example": "src/"
+        }
+    }
+}
