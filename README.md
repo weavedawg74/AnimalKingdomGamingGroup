@@ -1,5 +1,7 @@
 # Animal Kingdom Gaming Group website
 
-Website that I have been working on in my spare time as a site for my friends and I to link up with new players to game together. 
+Website that I have been working on in my spare time as a site for my friends and I to link up with new players to game together.
 
-It is currently hosted at https://weavedawg74.github.io/AnimalKingdomGamingGroup/, although the front end is mostly done (aside from style changes that I will be making later) I haven't yet started on the back-end of things.
+It is built on PHP and feeds into a SQL DB to save the users' gamer info.
+
+It is currently hosted at https://akgg.herokuapp.com/.
